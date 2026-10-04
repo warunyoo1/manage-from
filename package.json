@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "typecheck": "next typegen && tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit",
+    "test:status": "node scripts/check-payment-status.mjs",
+    "test:db": "node scripts/check-mongodb.mjs"
   },
   "dependencies": {
     "mongoose": "^9.10.4",

@@ -1,0 +1,89 @@
+.trigger,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 20px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.trigger {
+  border: 1px solid transparent;
+  padding: 5px 9px;
+  white-space: nowrap;
+  min-width: 90px;
+  font-family: inherit;
+}
+.trigger:hover {
+  filter: brightness(0.97);
+}
+.trigger:focus-visible {
+  outline: 2px solid #438d7a;
+  outline-offset: 2px;
+}
+.dot,
+.badge i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.chevron {
+  margin-left: auto;
+  padding-left: 9px;
+}
+.paid {
+  background: #e0f1e7;
+  color: #367954;
+}
+.pending {
+  background: #ffe6df;
+  color: #b55541;
+}
+.paused {
+  background: #fff0c6;
+  color: #97722e;
+}
+.review {
+  background: #efe3fb;
+  color: #8152a3;
+}
+.all {
+  background: #f0f5f2;
+  color: #54786a;
+}
+.menu {
+  position: fixed;
+  z-index: 100;
+  width: 224px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #e2eae5;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px #203e3225;
+  max-height: calc(100vh - 16px);
+  overflow-y: auto;
+}
+.menu button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 7px 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  min-height: 40px;
+}
+.menu button:hover,
+.menu button:focus-visible {
+  background: #f1f6f3;
+  outline: none;
+}
+.badge {
+  padding: 3px 9px;
+}
+.check {
+  color: #43836a;
+}

@@ -1,0 +1,164 @@
+.main {
+  max-width: 1640px;
+  color: #314b43;
+}
+.editDocument {
+  text-align: left;
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 2px 0;
+  background: transparent;
+  color: #45634e;
+  font: inherit;
+}
+.editDocument span {
+  display: block;
+  font-size: 10px;
+  color: #729b82;
+  margin-top: 4px;
+}
+.editDocument:hover {
+  color: #277255;
+}
+.editDocument:focus-visible {
+  outline: 2px solid #6c9f80;
+  outline-offset: 3px;
+}
+.paid {
+  background: #367954 !important;
+}
+.pending {
+  background: #b55541 !important;
+}
+.paused {
+  background: #97722e !important;
+}
+.review {
+  background: #8152a3 !important;
+}
+.notice {
+  padding: 12px 16px;
+  background: #e9f3ee;
+  color: #3f735d;
+  border-radius: 9px;
+  font-size: 12px;
+}
+.main :global(.page-heading h1) {
+  color: #294e46;
+}
+.main :global(.eyebrow) {
+  font-family: inherit;
+  letter-spacing: 0.3px;
+  font-size: 11px;
+  color: #94a69d;
+}
+.main :global(.page-description) {
+  color: #718776;
+}
+.main :global(.summary-card) {
+  border-color: #e1e9e4;
+  border-radius: 13px;
+}
+.main :global(.summary-card strong) {
+  color: #355b4c;
+  font-weight: 500;
+}
+.main :global(.summary-card .text-green) {
+  color: #538974;
+}
+.main :global(.summary-card .text-orange) {
+  color: #b99b71;
+}
+.main :global(.summary-card > span) {
+  color: #718374;
+}
+.main :global(.summary-card p) {
+  color: #9aaba0;
+}
+.main :global(.progress-track) {
+  background: #edf3ee;
+}
+.main :global(.progress-track > span) {
+  background: #87b59c;
+}
+.main :global(.table-panel) {
+  border-color: #e1e9e4;
+  border-radius: 14px;
+}
+.main :global(.table-panel-heading) {
+  padding-top: 25px;
+  padding-bottom: 22px;
+}
+.main :global(.table-panel-heading h2) {
+  color: #46675a;
+}
+.main :global(.table-panel-heading p) {
+  color: #75897b;
+}
+.main :global(.table-toolbar .search-box) {
+  background: #fbfdfb;
+  border-color: #e2eae4;
+  border-radius: 9px;
+}
+.main :global(.filter-select),
+.main :global(.project-filter-select) {
+  border-color: #e2eae4;
+  border-radius: 8px;
+  color: #6e8d7a;
+}
+.main :global(.payments-table th) {
+  background: #e8f1eb;
+  color: #5c7d69;
+  font-size: 11px;
+  border-bottom: 1px solid #dce8df;
+  border-right-color: #e1eae3;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.main :global(.payments-table .amount-column) {
+  background: #dcebe1;
+  color: #416c50;
+}
+.main :global(.payments-table td) {
+  border-bottom-color: #edf1ee;
+  color: #63796a;
+}
+.main :global(.payments-table .creditor-cell) {
+  color: #45634e;
+}
+.main :global(.payments-table .amount-cell) {
+  color: #476d50;
+}
+.main :global(.payments-table tr:nth-child(even) td) {
+  background: #fbfdfb;
+}
+.main :global(.payments-table .paid-row td),
+.main :global(.payments-table .paid-row:nth-child(even) td) {
+  background: #f2f8f3;
+}
+.main :global(.payments-table tr:hover td) {
+  background: #edf5ef;
+}
+.main :global(.cell-status.pending) {
+  background: #fcf1e3;
+  color: #b1946d;
+}
+.main :global(.cell-status.paid) {
+  background: #e1efe5;
+  color: #648e6f;
+}
+.main :global(.table-bottom) {
+  color: #95a79a;
+  border-top-color: #e6eee8;
+}
+.main :global(.table-bottom .filtered-total) {
+  color: #6c8a73;
+}
+.main :global(.is-favorite) {
+  color: #559782 !important;
+}
+
+.main :global(.payments-table) {
+  font-size: 12px;
+}

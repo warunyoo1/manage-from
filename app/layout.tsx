@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Manage From",
-  description: "พื้นที่เริ่มต้นสำหรับระบบ Manage From",
+  description: "จัดการเจ้าหนี้และรายการเบิกจ่ายจากหลายโปรเจกต์ในพื้นที่เดียวกัน",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

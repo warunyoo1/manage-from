@@ -1,0 +1,10 @@
+.env*
+!.env.example
+node_modules
+.next
+.git
+.vercel
+scripts
+AGENTS.md
+README.md
+*.tsbuildinfo

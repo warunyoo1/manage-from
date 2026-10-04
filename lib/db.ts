@@ -32,7 +32,11 @@ export async function connectDB(): Promise<typeof mongoose> {
   }
 
   if (!cache.promise) {
-    cache.promise = mongoose.connect(uri, { serverSelectionTimeoutMS: 10000 });
+    cache.promise = mongoose.connect(uri, {
+      dbName: process.env.MONGODB_DB || "manage_from",
+      serverSelectionTimeoutMS: 10000,
+      maxPoolSize: 10,
+    });
   }
 
   try {
