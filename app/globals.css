@@ -1,5 +1,89 @@
 @import "tailwindcss";
 
+.auth-page { min-height: 100svh; display: grid; grid-template-columns: 1fr 1fr; background: #fff; }
+.auth-story { display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; padding: 46px 58px 32px; background: #edf4f1; color: #244c47; }
+.auth-story::after { content: ""; position: absolute; width: 490px; height: 490px; border: 1px solid #dbe8e2; border-radius: 50%; bottom: -230px; left: -170px; pointer-events: none; }
+.auth-story .brand { align-self: flex-start; }
+.auth-story-copy { max-width: 440px; margin: 65px 0 85px; z-index: 1; }
+.auth-eyebrow { font-size: 10px; letter-spacing: 2.3px; color: #6e8c83; }
+.auth-story h1 { font-size: clamp(30px, 3.5vw, 46px); line-height: 1.5; letter-spacing: -1.7px; margin: 20px 0 18px; }
+.auth-story-copy > p { line-height: 1.9; color: #688179; font-size: 15px; }
+.auth-story-footer { font-size: 11px; color: #8aa198; z-index: 1; }
+.auth-preview { margin-top: 36px; padding: 24px; border: 1px solid #dfe9e3; background: #ffffffcf; border-radius: 18px; box-shadow: 0 16px 45px #244c4708; }
+.auth-preview-top { display: flex; align-items: center; gap: 13px; }
+.auth-preview-top > div { display: flex; flex: 1; flex-direction: column; gap: 6px; font-size: 13px; }
+.auth-preview-top > div span { font-size: 10px; color: #8a9b94; }
+.auth-preview-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: #eaf1ec; }
+.auth-preview-line { display: flex; justify-content: space-between; align-items: center; margin-top: 27px; font-size: 11px; color: #749087; }
+.auth-preview-progress { display: flex; gap: 5px; margin-top: 15px; }
+.auth-preview-progress i { height: 5px; flex: 1; background: #a6c7b7; border-radius: 6px; }
+.auth-preview-progress i:last-child { background: #e1ebe5; }
+.auth-panel { padding: 64px 36px 26px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.auth-card { width: 100%; max-width: 380px; margin: auto 0; padding: 24px 0; }
+.auth-badge { display: inline-flex; align-items: center; gap: 7px; border: 1px solid #dfebe6; background: #f5f9f7; color: #598373; padding: 7px 11px; border-radius: 25px; font-size: 11px; }
+.auth-card h2 { font-size: 29px; letter-spacing: -.7px; margin: 24px 0 10px; color: #263f3b; }
+.auth-description { color: #85948e; line-height: 1.8; font-size: 12px; margin-bottom: 30px; }
+.auth-fields { display: grid; gap: 19px; }
+.auth-fields label { display: grid; gap: 9px; color: #51645d; font-size: 12px; }
+.auth-fields input, .team-invite input, .invite-result input { width: 100%; padding: 13px 14px; min-height: 47px; border-radius: 9px; border: 1px solid #dfe6e2; background: #fff; color: #2b463e; outline-offset: 2px; }
+.auth-fields input::placeholder, .team-invite input::placeholder { color: #a0aba6; font-size: 12px; }
+.auth-fields input[readonly] { background: #f5f8f6; color: #668375; }
+.auth-password { position: relative; }
+.auth-password input { padding-right: 58px; }
+.auth-password button { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); border: 0; background: transparent; padding: 6px 0; font-size: 11px; color: #709084; }
+.auth-submit { display: flex; justify-content: center; align-items: center; gap: 12px; width: 100%; min-height: 47px; background: #276e5c; border: 1px solid #276e5c; color: white; border-radius: 9px; padding: 12px 16px; font-size: 13px; font-weight: 600; }
+.auth-submit:hover { background: #205c4d; }
+.auth-fields > .auth-submit { margin-top: 6px; }
+.auth-error { border: 1px solid #f0d6cf; background: #fff4f0; color: #aa5545; padding: 12px 14px; border-radius: 9px; font-size: 12px; line-height: 1.7; }
+.auth-help { text-align: center; color: #93a198; font-size: 11px; margin-top: 23px; line-height: 1.8; }
+.auth-help a { color: #397c65; }
+.auth-private { border-top: 1px solid #edf1ef; display: flex; justify-content: center; align-items: center; gap: 7px; margin-top: 28px; padding-top: 22px; font-size: 10px; color: #91a398; }
+.auth-copyright { font-size: 10px; color: #b0bbb5; margin-top: 36px; }
+.account-link { display: flex; align-items: center; gap: 12px; }
+.account-signout { color: #778780; padding: 7px 10px; font-size: 11px; background: #fff; border: 1px solid #e1e8e3; border-radius: 7px; }
+.account-page { width: min(760px, 100%); padding: 40px 24px; margin: 0 auto; flex: 1; }
+.account-page > h1 { font-size: 27px; margin-top: 28px; }
+.account-back { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; color: #7c8d82; }
+.account-section { margin-top: 20px; padding: 27px; border-radius: 16px; border: 1px solid #e4eae5; background: #fff; }
+.account-section h2 { margin: 0 0 8px; font-size: 16px; }
+.account-section > p, .account-section-heading p { margin: 0; color: #8b9991; font-size: 12px; line-height: 1.8; }
+.account-section-heading { display: flex; align-items: center; gap: 15px; }
+.team-list { margin: 20px 0; }
+.team-member { display: flex; align-items: center; gap: 14px; border-top: 1px solid #edf1ee; padding: 16px 0; }
+.team-member > div { flex: 1; display: grid; gap: 7px; overflow-wrap: anywhere; }
+.team-member strong { font-size: 13px; }
+.team-member div span { color: #8d9a94; font-size: 11px; }
+.team-invite label { display: block; margin-bottom: 10px; font-size: 12px; }
+.team-invite > div, .invite-result > div { display: flex; gap: 10px; }
+.team-invite .auth-submit { width: auto; flex-shrink: 0; }
+.invite-result { margin-top: 20px; padding: 18px; background: #f1f7f3; border: 1px solid #deebe3; border-radius: 10px; }
+.invite-result strong { font-size: 12px; color: #35785d; }
+.invite-result p { font-size: 11px; color: #8ca195; line-height: 1.8; }
+.invite-result input { min-width: 0; font-size: 11px; }
+.password-settings { margin-top: 24px; max-width: 390px; }
+.auth-success { font-size: 12px; color: #367f5b; line-height: 1.8; }
+.user-create-form { margin-top: 20px; max-width: 440px; }
+.user-created-notice { margin-top: 18px; padding: 14px; border-radius: 9px; background: #f0f7f2; }
+.first-password-page { display: grid; min-height: 100svh; place-items: center; padding: 24px; }
+.first-password-page .account-section { width: min(100%, 460px); padding: 35px; margin: 0; }
+.first-password-page h1 { font-size: 26px; margin: 25px 0 12px; }
+.first-password-page .password-settings { max-width: none; }
+.first-password-signout { display: block; border: 0; background: transparent; color: #86978d; font-size: 12px; padding: 8px; margin: 20px auto 0; }
+@media (max-width: 760px) {
+  .auth-page { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+  .auth-story { padding: 25px 27px; }
+  .auth-story-copy, .auth-story-footer { display: none; }
+  .auth-panel { padding: 34px 27px 23px; }
+  .auth-card { padding: 0; }
+  .auth-card h2 { font-size: 26px; }
+  .account-page { padding: 30px 16px; }
+  .account-section { padding: 22px 18px; }
+  .team-invite > div, .invite-result > div { flex-direction: column; }
+  .team-member .auth-badge { font-size: 9px; padding: 5px 8px; }
+  .account-link .workspace-label { display: none; }
+  .topbar-right { gap: 12px; }
+}
+
 :root {
   --background: #f7f9fb;
   --foreground: #203048;

@@ -1,5 +1,6 @@
-import { loadEnvConfig } from '@next/env';
+import nextEnv from '@next/env';
 import { spawnSync } from 'node:child_process';
+const { loadEnvConfig } = nextEnv;
 loadEnvConfig(process.cwd());
 const uri = process.env.MONGODB_URI;
 if (!uri) throw new Error('MongoDB server setting is missing.');

@@ -24,6 +24,12 @@ function publish(changes: Partial<Snapshot>) {
     listeners.forEach((listener) => listener());
 }
 async function responseData(response: Response) {
+    if (response.status === 401 || response.status === 403) {
+        const denial = await response.clone().json().catch(() => null);
+        clearWorkspace();
+        window.location.replace(denial?.error?.code === "PASSWORD_CHANGE_REQUIRED" ? "/account" : "/login");
+        throw new Error("กรุณาเข้าสู่ระบบอีกครั้ง");
+    }
     const body = await response.json();
     if (!response.ok || body.success !== true)
         throw new Error(body.error?.message || "เชื่อมต่อฐานข้อมูลไม่ได้ กรุณาลองอีกครั้ง");
@@ -31,6 +37,11 @@ async function responseData(response: Response) {
     if (!workspace || !Number.isInteger(body.data.revision))
         throw new Error("อ่านข้อมูลไม่สำเร็จ กรุณาลองอีกครั้ง");
     return { workspace, revision: body.data.revision as number };
+}
+export function clearWorkspace() {
+    snapshot = { ...initialSnapshot, loading: false };
+    initialized = false;
+    listeners.forEach((listener) => listener());
 }
 export function refreshWorkspace() {
     if (refreshing)
